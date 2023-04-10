@@ -1,0 +1,42 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huseyinozgul/csv-parser-comparer.git"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "jest"
+  ],
+  "author": "Hasan Huseyin Ozgul",
+  "license": "ISC",
+  "name": "csv-parser-comparer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node dist/index.js",
+    "prestart": "npm run build",
+    "build": "rm -rf dist && tsc",
+    "test": "jest -i --colors --verbose --detectOpenHandles",
+    "test:watch": "jest -i --watchAll",
+    "coverage": "jest -i --coverage",
+    "coverage:coveralls": "jest -i --coverage --coverageReporters=text-lcov | coveralls"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.6",
+    "csv": "^6.2.8",
+    "csv-parse": "^5.3.6",
+    "fast-csv": "^4.3.6",
+    "moment": "^2.29.3",
+    "papaparse": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/papaparse": "^5.3.7",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.16",
+    "ts-jest": "^27.1.5",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}
